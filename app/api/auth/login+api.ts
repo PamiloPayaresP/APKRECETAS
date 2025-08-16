@@ -1,6 +1,6 @@
-import { MongoClient } from 'npm:mongodb@latest';
-import bcrypt from 'npm:bcryptjs@latest';
-import jwt from 'npm:jsonwebtoken@latest';
+import { MongoClient } from 'mongodb';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 const MONGODB_URI = 'mongodb+srv://mypersonalblog255:3226325537@mypersonalblog.jiu416h.mongodb.net/';
 const JWT_SECRET = 'your-jwt-secret-key-change-this-in-production';

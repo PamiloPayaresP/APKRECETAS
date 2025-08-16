@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from 'npm:mongodb@latest';
+import { MongoClient, ObjectId } from 'mongodb';
 
 const MONGODB_URI = 'mongodb+srv://mypersonalblog255:3226325537@mypersonalblog.jiu416h.mongodb.net/';
 
