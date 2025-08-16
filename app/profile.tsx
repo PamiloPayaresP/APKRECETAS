@@ -8,7 +8,7 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
-import { User, Settings, LogOut, Heart, BookOpen, Award, Edit3 } from 'lucide-react-native';
+import { User, Settings, LogOut, Heart, BookOpen, Award, CreditCard as Edit3 } from 'lucide-react-native';
 import { useAuth } from '@/hooks/useAuth';
 import { router } from 'expo-router';
 

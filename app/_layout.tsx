@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { AuthProvider } from '@/hooks/useAuth';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ChefHat, Search, Heart, User, Home } from 'lucide-react-native';
+import { ChefHat, Search, Heart, User, Chrome as Home } from 'lucide-react-native';
 
 export default function RootLayout() {
   useFrameworkReady();
