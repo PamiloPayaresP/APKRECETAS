@@ -198,13 +198,27 @@ const mockRecipes = {
   ],
 };
 
-export async function GET(request: Request, { category }: { category: string }) {
+export async function GET(request: Request) {
   try {
-    if (request.method === "OPTIONS") {
-      return new Response(null, {
-        status: 200,
-        headers: corsHeaders,
-      });
+    const url = new URL(request.url);
+    const pathSegments = url.pathname.split('/');
+    const category = pathSegments[pathSegments.length - 1];
+
+    if (!category) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: 'Categoría no especificada',
+          recipes: [],
+        }),
+        {
+          status: 400,
+          headers: {
+            'Content-Type': 'application/json',
+            ...corsHeaders,
+          },
+        }
+      );
     }
 
     // Return mock data for the requested category
